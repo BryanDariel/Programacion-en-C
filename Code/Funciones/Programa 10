@@ -2,7 +2,6 @@
 Nombre: Bryan Dariel Rondon Saldaña
 Matricula: 2022-0368
 
-/*
 El programa, al recibir como datos dos números enteros, determina si el segundo es múltiplo del primero. 
 */
 
@@ -10,13 +9,16 @@ El programa, al recibir como datos dos números enteros, determina si el segundo
 
 int multiplo(int, int);
 
-void main(void){
+void main(void) {
     
     int NU1, NU2, RES;
     
-    printf("Ingrese 2 numeros para determinar si el segundo es multiplo del primero.\n");
-    printf("\nIngresa los dos números: ");
-    scanf("%d %d", &NU1, &NU2);
+    printf("Bienvenido. \nIngrese 2 numeros para determinar si el segundo es multiplo del primero.\n");
+    printf("\nIngresa el primer número: ");
+    scanf("%d", &NU1);
+    printf("Ingresa el primer número: ");
+    scanf("%d", &NU2);
+    
     RES = multiplo(NU1, NU2);
     
     if (RES)
@@ -25,7 +27,7 @@ void main(void){
     printf("\nEl segundo número no es múltiplo del primero");
 }
 
-int multiplo(int N1, int N2){
+int multiplo(int N1, int N2) {
     
     /* Esta función determina si N2 es múltiplo de N1. */
     
