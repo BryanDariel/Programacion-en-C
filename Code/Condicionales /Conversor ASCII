@@ -1,0 +1,48 @@
+/*
+
+Programa conversor del Metodo ASCII
+
+https://administracionvanesa.school.blog/clasificacion-binaria-codigo-ascii/
+
+*/
+
+#include <stdio.h>
+
+int main() {
+    
+    int NumberValue;
+    double DecimalValue;
+    char LetterValue;
+    int Selector;
+    
+    printf("Bienvenido. ¿Desea convertir enteros a char, o char a enteros? \n\n1. Char a Enteros. \n2. Enteros a Char.");
+    printf("\n\nSeleccion: ");
+    scanf("%d", &Selector);
+    
+    if (Selector == 1) {
+        
+        printf("\nEscriba una letra para convertirla en entero: ");
+        
+        scanf("%c", &LetterValue);
+        
+        NumberValue = (int)LetterValue;
+        
+         printf("El char %c convertido en entero es: %d", LetterValue, NumberValue);
+    }
+    
+    else if (Selector == 2) {
+        
+        printf("\nEscriba un entero para convertirlo en char: ");
+        scanf(" %d", &NumberValue);
+        
+        LetterValue = (char)NumberValue;
+        
+        printf("El valor de %d convertido en char es: %c", NumberValue, LetterValue);
+    }
+    
+    else if (Selector <= 0 || Selector >= 3) {
+        printf("\nError. Vuelva a selccionar una opción.");
+    }
+    
+    return 0;
+}
