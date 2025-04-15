@@ -6,12 +6,12 @@ Matricula: 2022-0368
 Programa en C que permita generar la tabla de multiplicar de un número entero positivo N, comenzando desde 1.
 */
 
-//Libreria
+/* Libreria */
 #include <stdio.h>
 
 int main (void) {
 
-//Variables
+/* Variables */
 int n = 0; // Este es el multiplicando
 int x = 0; // Este es el multiplicador
 int p = 0 ; // Este es el producto
