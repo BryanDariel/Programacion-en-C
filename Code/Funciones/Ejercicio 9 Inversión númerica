@@ -1,14 +1,17 @@
-//Nombre: Bryan Dariel Rondon Saldaña
-//Matricula: 2022-0368
-/* Programa en C que, al ingresar un numero de almenos 2 digitos, lo invierta. Ej: "9256" a "6529"*/
+/*
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+
+Programa en C que, al ingresar un numero de almenos 2 digitos, lo invierta. Ej: "9256" a "6529"
+*/
 
 #include <stdio.h>
 
 int invertirNumero();
 int n, inv = 0;
 
-int main(){
-    
+int main() {
+   
     printf("Bienvenido.\nIntroduzca un numero para invertirlo: ");
     scanf("%d", &n);
     
@@ -17,8 +20,8 @@ int main(){
     return 0;
 }
 
-int invertirNumero(int n, int inv){
-    
+int invertirNumero(int n, int inv) {
+
     int a, b;
     
      while (n != 0){
