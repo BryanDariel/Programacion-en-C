@@ -1,8 +1,9 @@
-//Nombre: Bryan Dariel Rondon Saldaña
-//Matricula: 2022-0368
-/* Programa en C que, determine si un numero es perfecto.
+/*
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+Programa en C que, determine si un numero es perfecto.
 
-Un número se dice que es un número perfecto cuando se puede poner como suma de sus divisores propios. 
+¡Recordatorio! Un número se dice que es perfecto cuando la suma de sus divisores enteros es el mismo número, a excepción del mismo. 
 Por ejemplo, 6 es perfecto porque 1 + 2 + 3 = 6. 
 Los siguientes números perfectos son 28, 496 y 8128.
 */
