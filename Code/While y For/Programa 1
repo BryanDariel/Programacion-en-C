@@ -1,0 +1,30 @@
+//* 
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+
+El programa, al recibir los salarios de los profesores, obtiene el total de la nómina de la universidad.
+*/
+
+#include <stdio.h>
+
+void main(void){
+    
+    int I;
+    float SAL, NOM;
+    int numProf;
+    NOM = 0;
+    
+    printf("Programa para calcular los salarios de los profesores.");
+    printf("\n\nInserte el numero de profesores: ");
+    scanf("%i", &numProf);
+    
+    for (I=1; I<=numProf; I++){
+        
+        printf("\nIngrese el salario del profesor%d:\t", I);
+        scanf("%f", &SAL);
+        NOM = NOM + SAL;
+        
+    }
+    
+    printf("\nEl total de la nómina es: %.2f", NOM);
+}

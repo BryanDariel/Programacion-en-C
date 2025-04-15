@@ -1,0 +1,33 @@
+//Nombre: Bryan Dariel Rondon Saldaña 
+//Matricula: 2022-0368
+/*Programa en C que, al recibir como dato un número entero N, obtenga el resultado de la siguiente serie:
+
+1^1 - 2^2 + 3^3 - . . . + N^N. */
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    
+    int n, i, result = 0;
+    
+    printf("Bienvenido.\nIntroduzca un numero: ");
+    scanf("%d", &n);
+    
+    for (i = 1; i <= n; i++){
+        
+        if (i % 2 == 0){    //* Numeros pares
+            
+            result = result - pow(i, i);
+        } 
+        
+        else{
+            
+            result = result + pow(i, i); //* Numeros impares
+        }
+    }
+    
+    printf("\nEl resultado de la serie es: %d", result);
+     
+    return 0;
+}

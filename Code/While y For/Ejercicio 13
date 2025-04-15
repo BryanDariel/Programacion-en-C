@@ -1,0 +1,79 @@
+//Nombre: Bryan Dariel Rondon Saldaña 
+//Matricula: 2022-0368
+/*Programa en C que, al recibir como datos dos números enteros positivos, obtenga e imprima todos los números primos gemelos comprendidos entre dichos números. 
+Los primos gemelos son una pareja de números primos con una diferencia entre sí de exactamente dos.*/
+
+//Libreria
+#include <stdio.h>
+
+//Funcion principal
+int main(){
+    
+    //Variables
+    int n1, n2, i;
+    int a = 0, b;
+    
+    printf("Bienvenido.\nPara encontrar los numeros primos gemelos, por favor, introduzca el primer numero: ");
+    scanf("%d", &n1);
+    
+    printf("Ahora, introduzca el segundo numero: ");
+    scanf("%d", &n2);
+    
+    if (n1 == n2){
+        printf("\nError. Los numeros ingresados son iguales.");
+    }
+    else {
+        
+        // Intercambiar por el mayor
+        if (n1 > n2){ //* 7 - 3 
+        
+            int aux = n1; //* 7
+            n1 = n2; //* 3
+            n2 = aux; //* 7
+        }
+        
+        for (i = n1; i < n2; i++){ // Verificar si es primo
+            
+            /* 
+            Recordatorio del ejercicio 11
+            
+            11 / 1 = Primo exacto
+            11 / 2
+            11 / 3 
+            ...
+            11 / 11 = Primo exacto
+            */
+            
+            int creciente = 2;
+            int esPrimo = 1; //* Verdadero 
+            
+            while (esPrimo == 1 && creciente < i){
+                
+                if (i % creciente == 0){
+                    esPrimo = 0; // Falso
+                    
+                }
+                
+                else {
+                    
+                    creciente++;
+                }
+            }
+            
+            if (esPrimo == 1 && a == 0){
+                a = i;
+                
+            }
+            
+            else if (esPrimo == 1 && a != 0){ // Verificar si se ha encontrado un primo antes
+                b = i;
+                if ((b - a) == 2){
+                    printf("\n%d y %d son primos gemelos", a, b);
+                }
+                a = i;
+            }
+        }
+    }
+    
+    return 0;
+}

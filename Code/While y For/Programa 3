@@ -1,0 +1,31 @@
+/* 
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+
+El programa, al recibir como datos un conjunto de pagos realizados en el último mes, obtiene la suma de los mismos.
+
+*/
+
+#include <stdio.h>
+
+void main(void){
+    
+    float PAG, SPA;
+    SPA = 0;
+    
+    printf("Bienvenido al programa para calcular tus pagos del ultimo mes. \nInserte \"0\" para terminar el programa.\n\n");
+    printf("Ingrese el primer pago:\t");
+    scanf("%f", &PAG);
+    
+    while (PAG){
+        
+        /* La condición es verdadera mientras el pago es diferente de cero. */
+        
+        SPA = SPA + PAG;
+        printf("Ingrese el siguiente pago:\t");
+        scanf("%f", &PAG);
+        
+    }
+    
+    printf("\nEl total de pagos del mes es: %.2f", SPA);
+}

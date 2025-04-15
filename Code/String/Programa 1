@@ -1,0 +1,32 @@
+/*
+Nombre: Bryan Dariel Rondon
+Matricula: 2022-0368 
+
+Funciones para el manejo de caracteres de la biblioteca stdio.h 
+*/
+
+#include <stdio.h>
+
+void main(void){
+
+    char p1, p2, p3 = '$';
+    printf("\nIngrese un caracter: ");
+    p1=getchar(); /* La funcion "getchar" leer un caracter. */
+    putchar(p1); /* La funcion putchar para escribir un caracter. */
+    printf("\n");
+    fflush(stdin);
+    
+    /* 
+    Es recomendable usar la función "fflush" para limpiar el búfer,
+    porque generalmente queda con basura y genera un error en la ejecución del programa. 
+    */
+    
+    printf("\nEl caracter p3 es: ");
+    putchar(p3); /* Se utiliza la función putchar para escribir el caracter almacenado en p3. */
+    printf("\n");
+    printf("\nIngrese otro caracter: ");
+    fflush(stdin);
+    scanf("%c", &p2); /* scanf con el formato de variable %c para leer un caracter. */
+    printf("%c", p2); /* Se puede utilizar printf con el formato de variable %c para escribir un caracter. */
+    
+}

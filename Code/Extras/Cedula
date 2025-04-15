@@ -1,0 +1,87 @@
+/*
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+*/
+//Programa para crear una cedula
+
+#include <stdio.h>
+
+struct cedula
+{
+    char nombre[50];
+    char matricula[15];
+    
+    char fecha[50];
+
+    char pais[50];
+    char provincia[30];
+    char nacionalidad[20];
+    
+    char genero[50];
+    char tipoSangre[10];
+    char estadoCivil[20];
+    
+    char ocupacion[20];
+    
+    char codigoPostal[10];
+    
+    char calle[50];
+    char sector[20];
+    
+} cedula1;
+
+void main(void)
+{
+    printf("Cedula de Identidad");
+    printf("\nIngrese su nombre completo: ");
+    gets(cedula1.nombre);
+    printf("Ingrese la numero de la cedula: ");
+    gets(cedula1.matricula);
+    
+    printf("Ingrese su fecha de nacimiento. Utilice el formato \"dd/mm/aaaa\": ");
+    gets(cedula1.fecha);
+    fflush(stdin);
+    
+    printf("Ingrese su pais: ");
+    gets(cedula1.pais);
+    fflush(stdin);
+    printf("Ingrese su provincia: ");
+    gets(cedula1.provincia);
+    printf("Ingrese su nacionalidad: "); 
+    gets(cedula1.nacionalidad);
+    fflush(stdin);
+    
+    printf("Ingrese su genero: ");
+    gets(cedula1.genero);
+    printf("Ingrese el tipo de sangre: ");
+    gets(cedula1.tipoSangre);
+    printf("Ingrese su estado civil: ");
+    gets(cedula1.estadoCivil);
+    
+    printf("Ingrese su ocupacion: ");
+    gets(cedula1.ocupacion);
+    
+    printf("Ingrese el codigo postal: ");
+    gets(cedula1.codigoPostal);
+    printf("Ingrese la calle donde vive: ");
+    gets(cedula1.calle);
+    printf("Ingrese el sector donde vive: ");
+    gets(cedula1.sector);
+    fflush(stdin);
+    
+    //Impresion de datos
+    
+    printf("\n\nCEDULA DE IDENTIDAD Y ELECTORAL");
+    printf("\n NOMBRE COMPLETO: %s", cedula1.nombre);
+    printf("\n NUMERO DE CEDULA: %s", cedula1.matricula);
+    printf("\n LUGAR DE NACIMIENTO: %s, %s", cedula1.pais, cedula1.provincia);
+    
+    printf("\n NACIONALIDAD: %s", cedula1.nacionalidad);
+    
+    printf("\n FECHA DE NACIMIENTO: %s", cedula1.fecha);
+    
+    printf("\n SEXO: %s \t SANGRE: %s \t ESTADO CIVIL: %s", cedula1.genero, cedula1.tipoSangre, cedula1.estadoCivil);
+    
+    printf("\n\n CODIGO POSTAL: %s", cedula1.codigoPostal);
+    printf("\n\n DIRECCION DE RESIDENCIA: %s \n SECTOR: %s", cedula1.calle, cedula1.sector);
+}

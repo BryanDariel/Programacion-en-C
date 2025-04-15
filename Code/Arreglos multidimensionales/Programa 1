@@ -1,0 +1,44 @@
+/*
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+
+Programa en C que, al recibir como dato un arreglo bidimensional
+cuadrado de tipo entero de dimensión 10, imprima la diagonal de dicha matriz.
+
+*/
+
+#include <stdio.h>
+
+const int TAM = 10;
+
+void Lectura(int [][TAM], int);
+void Imprime(int [][TAM], int);
+
+void main (void){
+
+    int MAT[TAM][TAM];
+    Lectura(MAT, TAM);
+    Imprime(MAT, TAM);
+}
+
+void Lectura (int A[][TAM], int F)
+{
+    int i, j, f;
+    for (i = 0; j < f; i++)
+    {
+        printf("Ingrese el elemento %d %d: ", i+1, j+1);
+        scanf("%d", &A [i][j]);
+    }
+}
+
+void Imprime(int A[][TAM], int f)
+{
+    int i, j;
+    for (i = 0; i < f; i++){
+        for (j = 0; j < TAM; j++){
+            if (i == j){
+                printf("\nDiagonal %d %d: %d", i, j, A[i][j]);
+            }
+        }
+    }
+}

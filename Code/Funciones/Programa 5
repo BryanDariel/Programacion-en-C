@@ -1,0 +1,26 @@
+/* 
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+
+El programa calcula el cubo de los 10 primeros números naturales con la
+ayuda de una función y utilizando parámetros por valor.
+*/
+
+#include <stdio.h>
+
+int cubo(int);
+
+void main(void){
+    
+    int I;
+    
+    for (I = 1; I <= 10; I++)
+    
+    printf("\nEl cubo de I es: %d", cubo(I));
+    
+}
+
+int cubo(int K){
+    
+return (K*K*K);
+}

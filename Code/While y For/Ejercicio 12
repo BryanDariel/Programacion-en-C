@@ -1,0 +1,45 @@
+//Nombre: Bryan Dariel Rondon Saldaña 
+//Matricula: 2022-0368
+/*Programa en C que lea un número entero positivo NUM y escriba todos los números primos menores a dicho número.*/
+
+//Libreria
+#include <stdio.h>
+
+//Funcion principal
+int main(){
+    
+    //Variables
+    int n, i, creciente;
+    
+    printf("Bienvenido.\nIntroduzca un numero par encontrar sus primos: ");
+    scanf("%d", &n);
+    
+    for (i = 2; i < n; i++){
+        
+        /* 
+        11 / 1 = Excta
+        11 / 2 
+        11 / 3 
+        ...
+        11 / 11 = Exacta
+        */ 
+        
+        creciente = 2;
+        int esPrimo = 1; //* Verdadero
+        
+        while (esPrimo == 1 && creciente < i){
+            if (i % creciente == 0){
+                esPrimo = 0; //* Falso
+            }
+            else {
+                creciente++;
+            }
+        }
+        
+        if (esPrimo == 1){
+            printf("\n%d es un numero primo", i);
+        }
+    }
+    
+    return 0;
+}

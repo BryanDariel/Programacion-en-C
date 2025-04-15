@@ -1,0 +1,38 @@
+//Nombre: Bryan Dariel Rondon Saldaña 
+//Matricula: 2022-0368
+/*Programa en C que, al recibir como datos N números naturales, determine cuántos de ellos son positivos, negativos o nulos. */
+
+#include <stdio.h>
+
+int main () 
+{
+int n, i, positivos = 0, negativos = 0, nulos = 0;
+float dato;
+
+printf("\nBienvenido.\nIntroduzca la cantidad de datos verificar si son positivos, negativos o nulos: ");
+scanf("\n%d",&n);
+
+for (i = 1; i <= n; i++) {
+    
+    printf("\nIngrese un numero: ");
+    scanf("%f", &dato);
+    
+    if (dato > 0) {
+        
+        positivos++;
+        
+    }
+    else if (dato == 0){
+        nulos++;
+    }
+    else{
+        negativos++;
+    }
+}
+
+printf("\nLa cantidad de numeros positivos fueron: %d", positivos);
+printf("\nLa cantidad de numeros negativos fueron: %d", negativos);
+printf("\nLa cantidad de numeros nulos fueron: %d", nulos);
+
+return 0;
+}

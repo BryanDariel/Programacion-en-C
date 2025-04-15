@@ -1,0 +1,35 @@
+//Nombre: Bryan Dariel Rondon Saldaña
+//Matricula: 2022-0368
+/* Programa en C que, al ingresar un numero de almenos 2 digitos, lo invierta. Ej: "9256" a "6529"*/
+
+#include <stdio.h>
+
+int invertirNumero();
+int n, inv = 0;
+
+int main(){
+    
+    printf("Bienvenido.\nIntroduzca un numero para invertirlo: ");
+    scanf("%d", &n);
+    
+    printf("El numero invertido es: %d", invertirNumero(n, inv));
+    
+    return 0;
+}
+
+int invertirNumero(int n, int inv){
+    
+    int a, b;
+    
+     while (n != 0){
+        
+        a = n%10;
+        b = n/10;
+        
+        inv = inv*10+a;
+        
+        n = b;
+    }
+    
+    return inv;
+}

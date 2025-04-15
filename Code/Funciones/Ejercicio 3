@@ -1,0 +1,30 @@
+//Nombre: Bryan Dariel Rondon Saldaña
+//Matricula: 2022-0368
+/* Programa en C que, al ingresar un numero calcule su factorial */
+
+#include <stdio.h>
+
+int factorial();
+int n, i, acumulador = 1;;
+
+int main()
+{
+    
+    printf("Bienvenido.\nIntroduzca un numero para calcular su factorial: ");
+    scanf("%d", &n);
+    
+    printf("El factorial del numero  es: %d", factorial(n,acumulador));
+    
+    return 0;
+}
+
+int factorial(int n, int acumulador){
+    
+    for (i = n; i>0; i--){
+        
+        acumulador = acumulador*i;
+        
+    }
+    
+    return n, acumulador;
+}

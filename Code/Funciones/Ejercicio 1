@@ -1,0 +1,44 @@
+/*
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+*/
+/*Programs en C que, obtenga el promedio de pares e impares */
+
+#include <stdio.h>
+
+int promedio();
+
+int main(){
+	
+	promedio();
+	
+	return 0;
+}
+
+int promedio(){
+    
+    int n, i, conteoPares = 0, conteoImpares = 0;
+	
+	printf ("Bienvenido.\nIngrese un número: ");
+	scanf("%d", &n);
+	
+	for (i = 1; i <= n; i++){
+		if (n <= 0){
+			printf ("\nPor favor, ingrese otro número.");
+			return 0;
+	}
+	if (n >= 1) {
+		if (i % 2 == 0){
+			
+			conteoPares++;
+	}
+	else {
+		
+		conteoImpares++;
+	}
+	}
+	}
+	
+	printf ("\nEl número de pares encontrados es: %d", conteoPares);
+	printf ("\nEl número de impares encontrados es: %d", conteoImpares);
+}

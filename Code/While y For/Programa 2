@@ -1,0 +1,29 @@
+/* 
+Nombre: Bryan Dariel Rondon Saldaña
+Matricula: 2022-0368
+
+El programa, al recibir como datos N números enteros, obtiene la suma de los enteros positivos. 
+*/
+
+#include <stdio.h>
+
+void main(void){
+    
+    int I, N, NUM, SUM;
+    SUM = 0;
+    
+    printf("Calcular la suma de los enteros positivos.");
+    printf("\n\nIngrese el número de datos:\t");
+    scanf("%d", &N);
+    
+    for (I=1; I<=N; I++){
+    
+    printf("Ingrese el dato número %d:\t", I);
+    scanf("%d", &NUM);
+    if (NUM > 0)
+    SUM = SUM + NUM;
+    
+    }
+    
+    printf("\nLa suma de los números positivos es: %d", SUM);
+}

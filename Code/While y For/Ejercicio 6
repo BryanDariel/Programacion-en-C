@@ -1,0 +1,87 @@
+//Nombre: Bryan Dariel Rondon Saldaña 
+//Matricula: 2022-0368
+/* Programa en C que, al recibir como datos el peso, la altura y el sexo de N personas que pertenecen a un estado de la República Mexicana,
+obtenga el promedio del peso (edad ≥ 18) y el promedio de la altura (edad ≥ 18), tanto de la población masculina como de la femenina. */
+
+#include <stdio.h>
+
+int main () {
+    int n, i, edad;
+    char genero;
+    float peso, altura;
+    
+    int cantidadHombres = 0;
+    float pesoHombres = 0, alturaHombres = 0;
+    float promedioPesoH, promedioAlturaH;
+    
+    int cantidadMujeres = 0;
+    float pesoMujeres = 0, alturaMujeres = 0;
+    float promedioPesoF, promedioAlturaF;
+    
+    //Cantidad de personas
+    printf("Ingrese el numero de personas a evaluar: ");
+    scanf("%d", &n);
+    
+    //Ingresar los datos de cada persona
+    for (i = 1; i < n; i++)
+    {
+        printf("\nIngrese su genero (M) (F): ");  //* Introduccion del genero
+        scanf(" %c", &genero);
+        
+        if (genero == 'M' || genero == 'm'){    //* Hombres
+        
+            printf("\nIngrese su peso: " );     //Peso de los hombres
+            scanf("%f", &peso);
+            pesoHombres += peso;
+            
+            printf("\nIngrese su altura: " );     //Altura de los hombres
+            scanf("%f", &altura);
+            alturaHombres += altura;
+            cantidadHombres++;
+        }
+        
+        else if (genero == 'F' || genero == 'f'){ //* Mujeres
+            
+            printf("\nIngrese su peso: " );     //Peso de las mujeres
+            scanf("%f", &peso);
+            pesoMujeres += peso;
+            
+            printf("\nIngrese su altura: " );     //Altura de las mujeres
+            scanf("%f", &altura);
+            alturaMujeres += altura;
+            cantidadMujeres++;
+        }
+        
+        else {
+            printf("\nError. El genero es incorrecto.");
+        }
+    }
+    
+    if (cantidadHombres > 0){                                               //*Datos de los promedios de los hombres
+        promedioPesoH = pesoHombres / (float) (cantidadHombres);
+        promedioAlturaH = alturaHombres / (float) (cantidadHombres);
+    }
+    else {
+        promedioAlturaH = 0;
+        promedioPesoH = 0;
+    }
+    
+    if (cantidadMujeres > 0){                                               //*Datos de los promedios de las mujeres
+        promedioPesoF = pesoMujeres / (float) (cantidadMujeres);
+        promedioAlturaF = alturaMujeres / (float) (cantidadMujeres);
+    }
+    else {
+        promedioAlturaF = 0;
+        promedioPesoF = 0;
+    }
+    
+    //Calculo de los promedios
+    
+    printf("\nEl promedio de peso de los hombres es de: %.2f", promedioPesoH);   
+    printf("\nEl promedio de peso de las mujeres es de: %.2f", promedioPesoF);
+    
+    printf("\nEl promedio de la altura de los hombres es de: %.2f", promedioAlturaH);
+    printf("\nEl promedio de la altura de las mujeres es de: %.2f", promedioAlturaF);
+    
+return 0;
+}
