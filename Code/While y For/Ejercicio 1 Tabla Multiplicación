@@ -1,22 +1,23 @@
-//Nombre: Bryan Dariel Rondon Saldaña 
-//Matricula: 2022-0368
+/*
 
-//*Programa en C que permita generar la tabla de multiplicar de un número entero positivo N, comenzando desde 1.
+Nombre: Bryan Dariel Rondon Saldaña 
+Matricula: 2022-0368
+
+Programa en C que permita generar la tabla de multiplicar de un número entero positivo N, comenzando desde 1.
+*/
 
 //Libreria
-
 #include <stdio.h>
 
-int main (void) 
-{
+int main (void) {
 
 //Variables
-int n = 0; //* Este es el multiplicando
-int x = 0; //* Este es el multiplicador
-int p = 0 ; //* Este es el producto
-int i; 
+int n = 0; // Este es el multiplicando
+int x = 0; // Este es el multiplicador
+int p = 0 ; // Este es el producto
+int i; // Iterador
 
-printf("\nBienvenido.\nPor favor, introduzca el numero del multplicando: ");
+printf("\nBienvenido. Este es un programa para crear una Tabla de multiplicacion. \n\nPor favor, introduzca el numero del multplicando: ");
 scanf("%d", &n);
 
 printf("\nIntroduzca el número máximo del multiplicador: "); //Esto hara que multipliquemos N hasta el valor que queramos. Si x15 o hasta x3, por ejemplo
